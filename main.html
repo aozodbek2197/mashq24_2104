@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="width:100%; background:#ccc;">
+  <div id="bar" style="width:0%; background:green; color:white;">0%</div>
+</div>
+
+<button onclick="run()">Start</button>
+
+<script>
+function run(){
+    let i=0;
+    let x=setInterval(()=>{
+        if(i>=100) clearInterval(x);
+        i++;
+        bar.style.width=i+"%";
+        bar.innerHTML=i+"%";
+    },30);
+}
+</script>
+
+</body>
+</html>
